@@ -73,7 +73,7 @@ Where:
 
 A detailed explanation, including derivations and evaluations, is available in the PDF report linked below:
 
-🔗 [Project Report (PDF)](https://drive.google.com/your-pdf-link)
+🔗 [Project Report (PDF)](https://drive.google.com/file/d/1bkLjHE7IcfCrQjBmgb9V1KsiC2BMej1L/view?usp=sharing)
 
 ---
 
