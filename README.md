@@ -1,46 +1,92 @@
 # 🎬 Movie Recommender System
 
-This project implements a personalized movie recommender system using **Alternating Least Squares (ALS)** with both **biases** and **latent factors**, built on the **MovieLens 100K and 25M datasets**. It is part of the "Machine Learning at Scale" module at AIMS South Africa.
+This project implements a personalized movie recommender system using **Alternating Least Squares (ALS)** enhanced with **bias terms** and **latent factors**, applied on the **MovieLens 100K and 25M datasets**. Developed as part of the "Machine Learning at Scale" module at AIMS South Africa, the project emphasizes both mathematical clarity and practical implementation.
 
 ---
 
 ## 📌 Motivation
 
-When choosing a movie, we are often overwhelmed by endless options. This system aims to replicate the decision-making of a human who understands your tastes — recommending films you’re likely to enjoy. Inspired by early recommendation engines like Netflix Prize (2006), this project explores the fundamentals of **collaborative filtering** using matrix factorization.
+When choosing a movie, we are often overwhelmed by countless options. This system mimics a human assistant who understands your preferences and makes personalized recommendations. Inspired by collaborative filtering techniques such as those used in the **Netflix Prize (2006)**, this work explores the use of **matrix factorization** for scalable and intelligent predictions.
 
 ---
 
 ## 📊 Datasets Used
 
-- **MovieLens 100K** — 100,836 ratings by 610 users on 9,742 movies  
-- **MovieLens 25M** — 25 million ratings by 162,000 users on 62,000 movies
+* **MovieLens 100K** — 100,836 ratings by 610 users on 9,742 movies
+* **MovieLens 25M** — 25 million ratings by 162,000 users on 62,000 movies
 
-Each dataset includes:  
+Each dataset includes:
 `movies.csv`, `ratings.csv`, `tags.csv`, `links.csv`
 
 ---
 
-## 🧠 Approach
+## 🧠 Learning Models
 
-The project focuses on **Collaborative Filtering**, implemented through:
+This project contrasts two recommendation paradigms:
 
-1. **Baseline model with biases only**  
-2. **ALS with latent factors (matrix factorization)**  
-3. **Full model: biases + latent factors (optimized via ALS)**
+* **Content-based filtering**, which builds a profile for each user using item metadata
+* **Collaborative filtering**, which exploits the preferences of similar users, even when explicit data is missing
 
-We use **Probabilistic Matrix Factorization (PMF)** under a Bayesian framework to estimate the user–item interaction matrix \( R \approx UV^T \).
+We focus on the latter by using **Probabilistic Matrix Factorization (PMF)** to recover missing ratings from the user–item matrix $R$.
+
+We assume a low-rank approximation:
+
+$R \approx UV^T$
+
+Where:
+
+* $U \in \mathbb{R}^{M \times K}$ is the latent matrix for $M$ users
+* $V \in \mathbb{R}^{N \times K}$ is the latent matrix for $N$ items
+
+The rating matrix $R \in \mathbb{R}^{M \times N}$ is sparse. PMF fills in the blanks using **Bayesian learning**:
+
+$p(U, V | R, \sigma^2) \propto p(R | U, V, \sigma^2) p(U | \sigma_U^2) p(V | \sigma_V^2)$
+
+Assuming Gaussian priors and a likelihood term, we obtain the log-likelihood and optimize it with respect to $U$ and $V$ using alternating least squares (ALS).
 
 ---
 
 ## ⚙️ Core Algorithm – ALS
 
-The objective function is optimized alternately over:
-- User latent factors \( U \)  
-- Item latent factors \( V \)  
-- User and item biases \( b_U, b_V \)
+The complete model includes:
 
-The optimization steps follow:
+$$
+R_{mn} \approx U_m^T V_n + b^{(U)}_m + b^{(V)}_n
+$$
 
-```math
-R_{mn} \approx U_m^\top V_n + b^{(U)}_m + b^{(V)}_n
+Where:
 
+* $b^{(U)}$, $b^{(V)}$ are user and item biases
+* ALS alternates between optimizing $U$ and $V$ while holding the other fixed
+
+---
+
+## 📈 Results & Insights
+
+* Models trained on **MovieLens 100K** and **25M** showed strong performance and generalization
+* Using both biases and latent factors improves predictions compared to either alone
+* The sparsity of $R$ is effectively handled by PMF under ALS, achieving high scalability
+
+---
+
+## 📂 Report & Further Reading
+
+A detailed explanation, including derivations and evaluations, is available in the PDF report linked below:
+
+🔗 [Project Report (PDF)](https://drive.google.com/your-pdf-link)
+
+---
+
+## 🛠️ Tools Used
+
+* Python (NumPy, Pandas, Matplotlib)
+* Scikit-learn
+* Streamlit (for UI prototype)
+
+---
+
+## 🤝 Author
+
+**Koffi Benjamin AGBEGNAGLO**
+Master’s student in AI for Science @ AIMS South Africa
+[LinkedIn](https://linkedin.com/in/koffi) • [GitHub](https://github.com/BEN10KOFFI)
