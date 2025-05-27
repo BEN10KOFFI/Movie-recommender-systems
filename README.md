@@ -80,4 +80,3 @@ A detailed explanation, including derivations, evaluations and results, is avail
 ## 🛠️ Tools Used
 
 * Python (NumPy, Pandas, Matplotlib)
-* Scikit-learn
