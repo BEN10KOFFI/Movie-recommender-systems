@@ -81,11 +81,3 @@ A detailed explanation, including derivations, evaluations and results, is avail
 
 * Python (NumPy, Pandas, Matplotlib)
 * Scikit-learn
-
----
-
-## 🤝 Author
-
-**Koffi Benjamin AGBEGNAGLO**
-Master’s student in AI for Science @ AIMS South Africa
-[LinkedIn](https://www.linkedin.com/in/koffi-benjamin-ai/) • [GitHub](https://github.com/BEN10KOFFI)
