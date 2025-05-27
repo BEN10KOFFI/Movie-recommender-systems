@@ -89,4 +89,4 @@ A detailed explanation, including derivations and evaluations, is available in t
 
 **Koffi Benjamin AGBEGNAGLO**
 Master’s student in AI for Science @ AIMS South Africa
-[LinkedIn](https://linkedin.com/in/koffi) • [GitHub](https://github.com/BEN10KOFFI)
+[LinkedIn](https://www.linkedin.com/in/koffi-benjamin-ai/) • [GitHub](https://github.com/BEN10KOFFI)
