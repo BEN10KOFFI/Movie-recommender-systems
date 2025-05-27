@@ -1,6 +1,6 @@
 # 🎬 Movie Recommender System
 
-This project implements a personalized movie recommender system using **Alternating Least Squares (ALS)** enhanced with **bias terms** and **latent factors**, applied on the **[MovieLens 25M Datase](https://grouplens.org/datasets/movielens/)**. Developed as part of the "Machine Learning at Scale" module at AIMS South Africa, the project emphasizes both mathematical clarity and practical implementation.
+This project implements a personalized movie recommender system using **Alternating Least Squares (ALS)** enhanced with **bias terms** and **latent factors**, applied on the **[MovieLens 100K-25M Datase](https://grouplens.org/datasets/movielens/)**. It emphasizes both mathematical clarity and practical implementation.
 
 ---
 
@@ -12,8 +12,8 @@ When choosing a movie, we are often overwhelmed by countless options. This syste
 
 ## 📊 Datasets Used
 
-* **MovieLens 100K** — 100,836 ratings by 610 users on 9,742 movies
-* **MovieLens 25M** — 25 million ratings by 162,000 users on 62,000 movies
+* **[MovieLens 100K ](https://grouplens.org/datasets/movielens/)** — 100,836 ratings by 610 users on 9,742 movies
+* **[MovieLens 25M ](https://grouplens.org/datasets/movielens/)** — 25 million ratings by 162,000 users on 62,000 movies
 
 Each dataset includes:
 `movies.csv`, `ratings.csv`, `tags.csv`, `links.csv`
@@ -22,7 +22,7 @@ Each dataset includes:
 
 ## 🧠 Learning Models
 
-This project contrasts two recommendation paradigms:
+The project contrasts two recommendation paradigms:
 
 * **Content-based filtering**, which builds a profile for each user using item metadata
 * **Collaborative filtering**, which exploits the preferences of similar users, even when explicit data is missing
@@ -69,9 +69,9 @@ Where:
 
 ---
 
-## 📂 Report & Further Reading
+## 📂 Report For Further Reading
 
-A detailed explanation, including derivations and evaluations, is available in the PDF report linked below:
+A detailed explanation, including derivations and evaluations, is available in the PDF report of this project linked below:
 
 🔗 [Project Report (PDF)](https://drive.google.com/file/d/1bkLjHE7IcfCrQjBmgb9V1KsiC2BMej1L/view?usp=sharing)
 
@@ -81,7 +81,6 @@ A detailed explanation, including derivations and evaluations, is available in t
 
 * Python (NumPy, Pandas, Matplotlib)
 * Scikit-learn
-* Streamlit (for UI prototype)
 
 ---
 
