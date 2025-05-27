@@ -1,6 +1,6 @@
 # 🎬 Movie Recommender System
 
-This project implements a personalized movie recommender system using **Alternating Least Squares (ALS)** enhanced with **bias terms** and **latent factors**, applied on the **MovieLens 100K and 25M datasets**. Developed as part of the "Machine Learning at Scale" module at AIMS South Africa, the project emphasizes both mathematical clarity and practical implementation.
+This project implements a personalized movie recommender system using **Alternating Least Squares (ALS)** enhanced with **bias terms** and **latent factors**, applied on the **[MovieLens 100K and 25M datasets](https://grouplens.org/datasets/movielens/)**. Developed as part of the "Machine Learning at Scale" module at AIMS South Africa, the project emphasizes both mathematical clarity and practical implementation.
 
 ---
 
