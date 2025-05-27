@@ -71,7 +71,7 @@ Where:
 
 ## 📂 Report For Further Reading
 
-A detailed explanation, including derivations and evaluations, is available in the PDF report of this project linked below:
+A detailed explanation, including derivations, evaluations and results, is available in the PDF report of this project linked below:
 
 🔗 [Project Report (PDF)](https://drive.google.com/file/d/1bkLjHE7IcfCrQjBmgb9V1KsiC2BMej1L/view?usp=sharing)
 
